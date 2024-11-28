@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: blue;
+    animation: trocarCor 10s infinite alternate;
+}
+
+@keyframes trocarCor {
+    50% {
+        background-color: blue;
+    }
+    50% {
+        background-color: red;
+    }
+}
+
+#container {
+    width: 80%;
+    height: 80vh;
+    border-radius: 1%;
+    border: 5px solid #333;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.bola {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #f3d0ff, #2f0140);
+    border-radius: 50%;
+    border: solid black;
+    position: absolute;
+    cursor: pointer;
+}
+#score, #temporizador {
+    background-color: white;
+    padding: 5px;
+    border: solid black;
+    border-radius: 5%;
+    position: fixed;
+    top: 10px;
+    font-size: 1.5rem;
+}
+#score {
+    left: 10px;
+}
+#temporizador {
+    animation: trocarCorTemp 1s infinite alternate;
+    color: black;
+    right: 10px;
+}
+
+@keyframes trocarCorTemp {
+    0% {
+        color: black;
+    }
+    100% {
+        color: red;
+    }
+}
+
+#fim-jogo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+}
